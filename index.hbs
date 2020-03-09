@@ -2,7 +2,7 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-<header class="site-home-header">
+<header class="site-home-header" id="site-header">
     {{> header-background background=@site.cover_image}} {{!--Special header-image.hbs partial to generate the background image--}}
         <div class="inner">
             {{> "site-nav"}}
@@ -21,21 +21,127 @@ into the {body} of the default.hbs template --}}
 </header>
 
 {{!-- The main content area --}}
-<main id="site-main" class="site-main outer">
-    <div class="inner posts">
-
-        <div class="post-feed">
-            {{#foreach posts}}
+<div class="inner posts">
+    <main id="site-main" class="site-main outer">
+        <div class="inner">
+            <div class="icon-bar">
+                <div class="icon-widget">
+                    <a class="animated fadeInLeft" href="#vizija"><img src="/assets/company-vision.png" width="50px" height="50px"><br><br>Визија</a>
+                    <a class="animated fadeInUp" href="#misija"><img src="/assets/print.png" width="50px" height="50px"><br><br>Мисија</a>
+                    <a class="animated fadeInRight" href="#uspeh"><img src="/assets/competitive.png" width="50px" height="50px"><br><br>Успех</a>
+                </div>
+            </div>
+        </div>
+        <hr id="vizija">
+        <div class="row">
+            <div class="col animated fadeInUp">
+                <h1>Визија</h1>
+                <p>Сметководствено биро ПРАВЕКО постои за да направи значаен придонес за нашите клиенти и нивните бизниси. Ова го постигнуваме со посветување на внимание и напори за соработка и доверба во обезбедувањето на услуги кои ги исполнуваат највисоките стандарди за квалитет, перформанси и услуга.</p>
+                <p>Имањето на стручен кадар со имагинација, знаење и човечки вештини се од суштинско значење за успешно спроведување на оваа визија. Така што ќе ја одржиме досегашната исполнителност со следните вредности и сметководствени начела.</p>
+            </div>
+            <div class="col">
+                <img src="assets/vizija.jpg" class="responsive" height="400px" width="700px">
+            </div>
+        </div>
+        <hr id="misija">
+        <div class="row">
+            <div class="col animate-scrollRight">
+                <h1>Кои сме всушност ние и што можеме да сториме за Вас?</h1>
+                <p>ПРАВЕКО е фирма која се занимава со книговодствени услуги.
+                    Ние сме оформени со цел да ви помогнеме на вас за подобра и побрза услуга. Кај нас нема чекањe, нема нервирањe, се е брзо и квалитетно.</p>
+                <div class="misija-paragraf animate-scrollLeft">
+                    <p><b>Изработуваме:</b></p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i> Сметководствени услуги и пресметки на плати.</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i> Услуги од областа на Управувачко сметководство.</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i> Даночни совети, пресметки и извештаи.</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i> Деловен консалтинг, совети при имплементација на системи за деловно работење.</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i> Изработка на компилирани финансиски извештаи.</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i> Извршување оперативни работи во ФЗОМ, УЈП и АВРМ.</p>
+                    <p><i class="fa fa-check" aria-hidden="true"></i> Обуки за вашите вработени од областа на даночната легистатива, сметководство и финансии, in house или во нашите простории.</p>
+                </div>
+            </div>
+            <div class="col animate-scrollRight">
+                <img src="assets/slika5.jpg" class="responsive" height="400px" width="700px">
+            </div>
+        </div>
+        <hr id="uspeh">
+        <div class="row">
+            <div class="col animate-scrollLeft">
+                <h1>Зошто да не изберете нас</h1>
+                <p><i class="fa fa-check" aria-hidden="true"></i> Даночната изложеност ја одредуваме објективно спогласно даночната регулатива.</p>
+                <p><i class="fa fa-check" aria-hidden="true"></i> Се фокусираме на индивидуалните потреби на вашиот бизнис.</p>
+                <p><i class="fa fa-check" aria-hidden="true"></i> Го елиминираме ризикот од неусогласеност со законски прописи.</p>
+            </div>
+            <div class="col animate-scrollRight">
+                <img src="assets/slika9.jpg" class="responsive" height="400px" width="700px">
+            </div>
+        </div>
+        <hr>
+        <div class="inner posts">
+            <div class="post-feed">
+                {{#foreach posts limit="3"}}
 
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
+                    {{> "post-card"}}
 
-            {{/foreach}}
+                {{/foreach}}
+            </div>
         </div>
 
-    </div>
-</main>
+        <div class="row animate-scrollLeft" id="links">
+            <h1>Корисни линкови</h1><br>
+            <a href="https://www.crm.com.mk/DS/">Централен регистар на Република Северна Македонија <i class="fa fa-external-link" aria-hidden="true"></i></a><br>
+            <a href="http://www.ujp.gov.mk/mk/javni_informacii">Управа за јавни приходи <i class="fa fa-external-link" aria-hidden="true"></i></a><br>
+            <a href="https://www.nbrm.mk/">Народна банка на Република Северна Македонија <i class="fa fa-external-link" aria-hidden="true"></i></a><br>
+        </div>
+        <hr>
 
+        <div class="row animate-scrollRight">
+        <h1>Нашиот тим</h1><br>
+            <div class="column">
+                <div class="card">
+                    <img src="assets/katerina.jpg" alt="Katerina">
+                </div>
+                <div class="container">
+                    <h4><b>Катерина Минова</b></h4>
+                    <p>Основач и управител</p>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="assets/jagoda.jpg" alt="Jagoda">
+                </div>
+                <div class="container">
+                    <h4><b>Јагода Смилева</b></h4>
+                    <p>Овластен сметководител</p>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="assets/gordana.jpg" alt="Gordana">
+                </div>
+                <div class="container">
+                    <h4><b>Гордана Јачева</b></h4>
+                    <p>Сениор сметководител</p>
+                </div>
+            </div>
+        </div>
+        <hr id="contakt">
+        <div class="row contakt animate-scrollLeft">
+            <h1>Контакт и локација</h1>
+            <p><i class="fa fa-envelope fa-1x" aria-hidden="true"></i><a href = "mailto: praveko2010@yahoo.com"> Прати е-маил</a></p>
+            <p><i class="fa fa-phone fa-2x" aria-hidden="true"></i> Call +389 43 211 030</p>
+            <p><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i> Солунска бр.2 Veles, Macedonia 1400</p>
+        </div>
+<!--        <div id="map"></div>-->
+        <hr>
+    </main>
+    <footer>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    </footer>
+</div>
 {{> site-header}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
@@ -93,6 +199,83 @@ into the {body} of the default.hbs template --}}
 
         update();
 
+        $(".icon-bar a").on('click', function(event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top
+            }, 800);
+        });
     });
 </script>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+<script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+
+        var animateScrollElemsLeft = document.querySelectorAll('.animate-scrollLeft');
+        var animateScrollElemsRight = document.querySelectorAll('.animate-scrollRight');
+
+        animateScrollElemsLeft.forEach(function(elem) {
+            if (window.scrollY + 350 >= elem.offsetTop){
+                elem.classList.remove('animate-scrollLeft');
+                elem.classList.add('animated', 'fadeInLeftBig');
+            }
+        });
+
+        animateScrollElemsRight.forEach(function(elem) {
+            if (window.scrollY + 350  >= elem.offsetTop) {
+                elem.classList.remove('animate-scrollRight');
+                elem.classList.add('animated', 'fadeInRightBig');
+            }
+        })
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: 0
+        }, 500);
+    }
+</script>
+<!--<script>-->
+<!--    // Initialize and add the map-->
+<!--    function initMap() {-->
+<!--        // The location of Uluru-->
+<!--        var uluru = {lat: -25.344, lng: 131.036};-->
+<!--        // The map, centered at Uluru-->
+<!--        var map = new google.maps.Map(-->
+<!--                document.getElementById('map'), {zoom: 4, center: uluru});-->
+<!--        // The marker, positioned at Uluru-->
+<!--        var marker = new google.maps.Marker({position: uluru, map: map});-->
+<!--    }-->
+<!--</script>-->
+<!--Load the API from the specified URL
+* The async attribute allows the browser to render the page while the API loads
+* The key parameter will contain your own API key (which is not needed for this tutorial)
+* The callback parameter executes the initMap() function
+-->
+<!--<script async defer-->
+<!--        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnXz-e7mU_FJGwTar3hIHs2cym4kOSxvw&callback=initMap">-->
+<!--</script>-->
+
 {{/contentFor}}
