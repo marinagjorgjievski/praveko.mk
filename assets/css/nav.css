@@ -1,0 +1,165 @@
+.nik-navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 25px;
+}
+.nik-navbar-toggler {
+    margin-left: 20px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    z-index: 9999;
+}
+.nik-navbar-toggler.fixed {
+    position: fixed;
+}
+.nik-navbar-toggler span {
+    display: block;
+    width: 26px;
+    height: 4px;
+    background-color: #000000;
+    margin: 6px 0;
+    border-radius: 5px;
+}
+.nik-navbar-toggler.active {
+    margin-top: 20px;
+    margin-left: 25px;
+}
+.nik-navbar-toggler.active span {
+    margin: 0;
+}
+.nik-navbar-toggler.active span:nth-child(1) {
+    animation: mob_move_first_handle_active 0.5s ease-out forwards;
+}
+.nik-navbar-toggler.active span:nth-child(2) {
+    transform: translateX(-30vw);
+    opacity: 0;
+}
+.nik-navbar-toggler.active span:nth-child(3) {
+    width: 100%;
+    animation: mob_move_last_handle_active 0.5s ease-out forwards;
+}
+@keyframes mob_move_first_handle_active {
+    0% {
+        width: 0;
+        transform: translateX(0px) translateY(0px);
+    }
+    40% {
+        width: 33%;
+        transform: translateX(0px) translateY(9px);
+    }
+    60% {
+        width: 66%;
+        transform: translateX(0px) translateY(9px);
+    }
+    100% {
+        width: 100%;
+        transform: rotate(-45deg) translateX(-6px) translateY(-3px);
+    }
+}
+
+@keyframes mob_move_last_handle_active {
+    0% {
+        transform: translateX(0px) translateY(0px);
+    }
+    40% {
+        transform: translateX(0px) translateY(-9px);
+    }
+    60% {
+        transform: translateX(0px) translateY(-9px);
+    }
+    100% {
+        transform: rotate(45deg) translateX(-9px) translateY(0px);
+    }
+}
+.nik-navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+}
+.nik-navbar-collapse ul {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    text-align: center;
+}
+.nik-navbar-collapse ul a {
+    padding-right: 0;
+    padding-left: 0;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+.nik-navbar-collapse ul li.active:after {
+    content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 2px auto 0 auto;
+    width: 16px; /* Change this to whatever width you want. */
+    border-bottom: 2px solid #000000; /* This creates the border. Replace black with whatever color you want. */
+    border-radius: 7px;
+}
+@media (max-width: 992px) {
+    .nik-navbar-collapse {
+        position: fixed;
+        display: block;
+        height: 100%;
+        width: 0;
+        z-index: 9998;
+        top: 0;
+        left: 0;
+        background:rgb(199, 135, 99);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .nik-navbar-collapse li {
+            padding-bottom: 60px;
+    }
+    .nik-navbar-collapse ul {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .nik-navbar-collapse ul li a {
+        color: #000000;
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .nik-navbar-collapse ul li.active:after {
+        margin: 4px auto 0 auto;
+        width: 26px;
+        border-bottom: 5px solid #000000;
+    }
+}
+@media (min-width: 992px) {
+    .nik-navbar-expand-lg {
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+    }
+    .nik-navbar-expand-lg .nik-navbar-toggler {
+        display: none;
+    }
+    .nik-navbar-expand-lg ul {
+        flex-direction: row;
+    }
+    .nik-navbar-expand-lg ul a {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .nik-navbar-expand-lg .nik-navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+}

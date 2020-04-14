@@ -4,18 +4,17 @@ into the {body} of the default.hbs template --}}
 
 <header class="site-home-header" id="site-header">
     {{> header-background background=@site.cover_image}} {{!--Special header-image.hbs partial to generate the background image--}}
-        <div class="inner">
-            {{> "site-nav"}}
-            <div class="site-header-content">
-                <h1 class="site-title">
-                    {{#if @site.logo}}
-                        <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
-                    {{else}}
-                        {{@site.title}}
-                    {{/if}}
-                </h1>
-                <h2 class="site-description">{{@site.description}}</h2>
-            </div>
+    <div class="inner">
+        {{> "site-nav"}}
+        <div class="site-header-content">
+            <h1 class="site-title">
+                {{#if @site.logo}}
+                    <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
+                {{else}}
+                    {{@site.title}}
+                {{/if}}
+            </h1>
+            <h2 class="site-description">{{@site.description}}</h2>
         </div>
     </div>
 </header>
@@ -26,15 +25,15 @@ into the {body} of the default.hbs template --}}
         <div class="inner">
             <div class="icon-bar">
                 <div class="icon-widget">
-                    <a class="animated fadeInLeft" href="#vizija"><img src="/assets/company-vision.png" width="50px" height="50px"><br><br>Визија</a>
-                    <a class="animated fadeInUp" href="#misija"><img src="/assets/print.png" width="50px" height="50px"><br><br>Мисија</a>
-                    <a class="animated fadeInRight" href="#uspeh"><img src="/assets/competitive.png" width="50px" height="50px"><br><br>Успех</a>
+                    <a class="animated fadeInLeft" href="#vizija"><img src="/assets/widgets/company-vision.png" width="50px" height="50px"><br><br>Визија</a>
+                    <a class="animated fadeInUp" href="#misija"><img src="/assets/widgets/print.png" width="50px" height="50px"><br><br>Мисија</a>
+                    <a class="animated fadeInRight" href="#uspeh"><img src="/assets/widgets/competitive.png" width="50px" height="50px"><br><br>Успех</a>
                 </div>
             </div>
         </div>
         <hr id="vizija">
         <div class="row">
-            <div class="col animated fadeInUp">
+            <div class="col">
                 <h1>Визија</h1>
                 <p>Сметководствено биро ПРАВЕКО постои за да направи значаен придонес за нашите клиенти и нивните бизниси. Ова го постигнуваме со посветување на внимание и напори за соработка и доверба во обезбедувањето на услуги кои ги исполнуваат највисоките стандарди за квалитет, перформанси и услуга.</p>
                 <p>Имањето на стручен кадар со имагинација, знаење и човечки вештини се од суштинско значење за успешно спроведување на оваа визија. Така што ќе ја одржиме досегашната исполнителност со следните вредности и сметководствени начела.</p>
@@ -45,35 +44,36 @@ into the {body} of the default.hbs template --}}
         </div>
         <hr id="misija">
         <div class="row">
-            <div class="col animate-scrollRight">
+            <div class="col">
                 <h1>Кои сме всушност ние и што можеме да сториме за Вас?</h1>
                 <p>ПРАВЕКО е фирма која се занимава со книговодствени услуги.
-                    Ние сме оформени со цел да ви помогнеме на вас за подобра и побрза услуга. Кај нас нема чекањe, нема нервирањe, се е брзо и квалитетно.</p>
-                <div class="misija-paragraf animate-scrollLeft">
-                    <p><b>Изработуваме:</b></p>
-                    <p><i class="fa fa-check" aria-hidden="true"></i> Сметководствени услуги и пресметки на плати.</p>
-                    <p><i class="fa fa-check" aria-hidden="true"></i> Услуги од областа на Управувачко сметководство.</p>
-                    <p><i class="fa fa-check" aria-hidden="true"></i> Даночни совети, пресметки и извештаи.</p>
-                    <p><i class="fa fa-check" aria-hidden="true"></i> Деловен консалтинг, совети при имплементација на системи за деловно работење.</p>
-                    <p><i class="fa fa-check" aria-hidden="true"></i> Изработка на компилирани финансиски извештаи.</p>
-                    <p><i class="fa fa-check" aria-hidden="true"></i> Извршување оперативни работи во ФЗОМ, УЈП и АВРМ.</p>
-                    <p><i class="fa fa-check" aria-hidden="true"></i> Обуки за вашите вработени од областа на даночната легистатива, сметководство и финансии, in house или во нашите простории.</p>
-                </div>
+                    Ние сме оформени со цел да ви помогнеме на вас за подобра и побрза услуга. Кај нас нема чекањe, нема нервирањe, се е брзо и квалитетно.
+                </p>
             </div>
-            <div class="col animate-scrollRight">
-                <img src="assets/slika5.jpg" class="responsive" height="400px" width="700px">
+            <div class="misija-paragraf">
+                <p><b>Изработуваме:</b></p>
+                <p><i class="fa fa-check" aria-hidden="true"></i> Сметководствени услуги и пресметки на плати.</p>
+                <p><i class="fa fa-check" aria-hidden="true"></i> Услуги од областа на Управувачко сметководство.</p>
+                <p><i class="fa fa-check" aria-hidden="true"></i> Даночни совети, пресметки и извештаи.</p>
+                <p><i class="fa fa-check" aria-hidden="true"></i> Деловен консалтинг, совети при имплементација на системи за деловно работење.</p>
+                <p><i class="fa fa-check" aria-hidden="true"></i> Изработка на компилирани финансиски извештаи.</p>
+                <p><i class="fa fa-check" aria-hidden="true"></i> Извршување оперативни работи во ФЗОМ, УЈП и АВРМ.</p>
+                <p><i class="fa fa-check" aria-hidden="true"></i> Обуки за вашите вработени од областа на даночната легистатива, сметководство и финансии, in house или во нашите простории.</p>
+            </div>
+            <div class="col">
+                <img src="assets/misija.jpg" class="responsive" height="400px" width="700px">
             </div>
         </div>
         <hr id="uspeh">
         <div class="row">
-            <div class="col animate-scrollLeft">
-                <h1>Зошто да не изберете нас</h1>
-                <p><i class="fa fa-check" aria-hidden="true"></i> Даночната изложеност ја одредуваме објективно спогласно даночната регулатива.</p>
+            <div class="col">
+                <h1>Зошто да не изберете нас?</h1>
+                <p><i class="fa fa-check" aria-hidden="true"></i> Даночната изложеност ја одредуваме објективно согласно даночната регулатива.</p>
                 <p><i class="fa fa-check" aria-hidden="true"></i> Се фокусираме на индивидуалните потреби на вашиот бизнис.</p>
                 <p><i class="fa fa-check" aria-hidden="true"></i> Го елиминираме ризикот од неусогласеност со законски прописи.</p>
             </div>
-            <div class="col animate-scrollRight">
-                <img src="assets/slika9.jpg" class="responsive" height="400px" width="700px">
+            <div class="col">
+                <img src="assets/uspeh.jpg" class="responsive" height="400px" width="700px">
             </div>
         </div>
         <hr>
@@ -88,7 +88,7 @@ into the {body} of the default.hbs template --}}
             </div>
         </div>
 
-        <div class="row animate-scrollLeft" id="links">
+        <div class="row" id="links">
             <h1>Корисни линкови</h1><br>
             <a href="https://www.crm.com.mk/DS/">Централен регистар на Република Северна Македонија <i class="fa fa-external-link" aria-hidden="true"></i></a><br>
             <a href="http://www.ujp.gov.mk/mk/javni_informacii">Управа за јавни приходи <i class="fa fa-external-link" aria-hidden="true"></i></a><br>
@@ -96,11 +96,11 @@ into the {body} of the default.hbs template --}}
         </div>
         <hr>
 
-        <div class="row animate-scrollRight">
+        <div class="row">
         <h1>Нашиот тим</h1><br>
             <div class="column">
                 <div class="card">
-                    <img src="assets/katerina.jpg" alt="Katerina">
+                    <img class="team-img" src="assets/ourteam/katerina1.jpg" alt="Katerina">
                 </div>
                 <div class="container">
                     <h4><b>Катерина Минова</b></h4>
@@ -110,7 +110,7 @@ into the {body} of the default.hbs template --}}
 
             <div class="column">
                 <div class="card">
-                    <img src="assets/jagoda.jpg" alt="Jagoda">
+                    <img  class="team-img" src="assets/ourteam/jagoda1.jpg" alt="Jagoda">
                 </div>
                 <div class="container">
                     <h4><b>Јагода Смилева</b></h4>
@@ -120,7 +120,7 @@ into the {body} of the default.hbs template --}}
 
             <div class="column">
                 <div class="card">
-                    <img src="assets/gordana.jpg" alt="Gordana">
+                    <img class="team-img" src="assets/ourteam/gordana1.jpg" alt="Gordana">
                 </div>
                 <div class="container">
                     <h4><b>Гордана Јачева</b></h4>
@@ -129,17 +129,17 @@ into the {body} of the default.hbs template --}}
             </div>
         </div>
         <hr id="contakt">
-        <div class="row contakt animate-scrollLeft">
-            <h1>Контакт и локација</h1>
-            <p><i class="fa fa-envelope fa-1x" aria-hidden="true"></i><a href = "mailto: praveko2010@yahoo.com"> Прати е-маил</a></p>
-            <p><i class="fa fa-phone fa-2x" aria-hidden="true"></i> Call +389 43 211 030</p>
-            <p><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i> Солунска бр.2 Veles, Macedonia 1400</p>
+        <div class="row">
+        <h1>Локација</h1><br>
+            <div class="map">
+                <iframe width="1000" height="450" frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJcUBJZVorVBMRcx-T2zzcqdE&key=AIzaSyDwatlivHVlptPhkZkMZQwSvoooxbY3wS0" allowfullscreen></iframe>
+            </div>
         </div>
-<!--        <div id="map"></div>-->
         <hr>
     </main>
     <footer>
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
     </footer>
 </div>
 {{> site-header}}
@@ -184,13 +184,6 @@ into the {body} of the default.hbs template --}}
             var trigger = feed.getBoundingClientRect().top + window.scrollY;
             var progressMax = lastDocumentHeight - lastWindowHeight;
 
-            // show/hide nav
-            if (lastScrollY >= trigger - 20) {
-                nav.classList.add('fixed-nav-active');
-            } else {
-                nav.classList.remove('fixed-nav-active');
-            }
-
             ticking = false;
         }
 
@@ -208,16 +201,7 @@ into the {body} of the default.hbs template --}}
         });
     });
 </script>
-<script>
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-</script>
+
 <script>
     //Get the button
     var mybutton = document.getElementById("myBtn");
@@ -257,25 +241,5 @@ into the {body} of the default.hbs template --}}
         }, 500);
     }
 </script>
-<!--<script>-->
-<!--    // Initialize and add the map-->
-<!--    function initMap() {-->
-<!--        // The location of Uluru-->
-<!--        var uluru = {lat: -25.344, lng: 131.036};-->
-<!--        // The map, centered at Uluru-->
-<!--        var map = new google.maps.Map(-->
-<!--                document.getElementById('map'), {zoom: 4, center: uluru});-->
-<!--        // The marker, positioned at Uluru-->
-<!--        var marker = new google.maps.Marker({position: uluru, map: map});-->
-<!--    }-->
-<!--</script>-->
-<!--Load the API from the specified URL
-* The async attribute allows the browser to render the page while the API loads
-* The key parameter will contain your own API key (which is not needed for this tutorial)
-* The callback parameter executes the initMap() function
--->
-<!--<script async defer-->
-<!--        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnXz-e7mU_FJGwTar3hIHs2cym4kOSxvw&callback=initMap">-->
-<!--</script>-->
 
 {{/contentFor}}
